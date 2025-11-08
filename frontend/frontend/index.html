@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Orçamento 3D - Lidar Construções</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="landing">
+    <h1>Informe seus dados para começar</h1>
+    <form id="leadForm">
+      <input type="text" id="nome" placeholder="Seu nome" required>
+      <input type="email" id="email" placeholder="Seu email" required>
+      <input type="tel" id="telefone" placeholder="Seu telefone">
+      <button type="submit">Começar Orçamento</button>
+    </form>
+  </div>
+
+  <div id="configurator" style="display:none;">
+    <h2>Configure sua casa</h2>
+    <div id="viewer3d" style="width:100%; height:400px;"></div>
+
+    <div id="controls">
+      <label>Cor da parede: <input type="color" id="wallColor" value="#ffffff"></label>
+      <label>Tipo de porta:
+        <select id="doorType">
+          <option value="standard">Padrão semi-oca</option>
+          <option value="mioloSolido">Miolo sólido</option>
+          <option value="premium">Premium madeira/vidro</option>
+        </select>
+      </label>
+      <label>Acabamento:
+        <select id="finishing">
+          <option value="economico">Econômico</option>
+          <option value="intermediario">Intermediário</option>
+          <option value="premium">Premium</option>
+        </select>
+      </label>
+    </div>
+
+    <h3>Orçamento estimado: <span id="budgetValue">—</span></h3>
+    <button id="solicitar">Solicitar Orçamento</button>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
